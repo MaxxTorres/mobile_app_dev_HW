@@ -8,6 +8,27 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.header {
+  margin-top: -10px;
+  margin-left: -10px;
+  padding: 0.5rem;
+  height: 3rem;
+  width: 110%;
+  background: var(--c-blue);
+
+  font-family: 'Acme', sans-serif;
+  font-size: 2rem;
+}
+
+.wrapper {
+  border-style: solid;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  margin-top: 1rem;
+
+  display: flex;
+}
+
 .card {
   border-radius: 20px;
   background: #ffffff;
@@ -34,7 +55,8 @@ body {
 .card_lists {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-left: 1.5rem;
 }
 
 .recipe_info {
@@ -86,4 +108,12 @@ body {
   & ol {
     padding-left: 1.25rem;
   }
+}
+
+.user_rating {
+  margin: 0.25rem;;
+  width: 70%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,4 +1,7 @@
 import {useState} from 'react'
+import { FaThumbsUp } from "react-icons/fa"
+import { FaThumbsDown } from "react-icons/fa"
+
 // import React from 'react'
 // React.useState()
 
@@ -22,18 +25,24 @@ export default function UserRating(){
     }
 
     return (
-        <div>
-            <button onClick={handleMinusClick}>[-]</button>
+        <div className="user_rating">
+        
+            {(count==0) || <button onClick={handleMinusClick}><FaThumbsDown /></button>}
+            {(count==0) && <button onClick={handleMinusClick}></button>}
+
             <span>
                 {/* {count} */}
                 {[...Array(count)].map((heart, i)=>{
                     return(
-                        <span key="i"><Heart/></span>
+                        <span key="i"><Heart /></span>
                     )
                 })
                 }
             </span>
-            <button onClick={handlePlusClick}>[+]</button>
+
+            {(count==5) || <button onClick={handlePlusClick}><FaThumbsUp /></button>}
+            {(count==5) && <button onClick={handlePlusClick}></button>}
+
         </div>
     )
 }
