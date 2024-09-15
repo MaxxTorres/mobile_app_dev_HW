@@ -28,7 +28,7 @@ export default function UserRating(){
         <div className="user_rating">
         
             {(count==0) || <button onClick={handleMinusClick}><FaThumbsDown /></button>}
-            {(count==0) && <button onClick={handleMinusClick}></button>}
+            {(count==0) && <button></button>}
 
             <span>
                 {/* {count} */}
@@ -41,7 +41,7 @@ export default function UserRating(){
             </span>
 
             {(count==5) || <button onClick={handlePlusClick}><FaThumbsUp /></button>}
-            {(count==5) && <button onClick={handlePlusClick}></button>}
+            {(count==5) && <button></button>}
 
         </div>
     )
