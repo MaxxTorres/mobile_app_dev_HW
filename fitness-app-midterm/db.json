@@ -1,0 +1,46 @@
+{
+  "todos": [
+    {
+      "category": "Push Day",
+      "activity": "Bench Press",
+      "weight": "200",
+      "sets": "5",
+      "id": 1
+    },
+    {
+      "category": "Pull Day",
+      "activity": "Lateral Pull Downs",
+      "weight": "100",
+      "sets": "4",
+      "id": 2
+    },
+    {
+      "category": "Leg Day",
+      "activity": "Leg Press",
+      "weight": "300",
+      "sets": "3",
+      "id": 3
+    },
+    {
+      "category": "Push Day",
+      "activity": "Shoulder Press",
+      "weight": "",
+      "sets": "",
+      "id": 4
+    },
+    {
+      "category": "Pull Day",
+      "activity": "Back Rows",
+      "weight": "",
+      "sets": "",
+      "id": 5
+    },
+    {
+      "category": "Leg Day",
+      "activity": "Squats",
+      "weight": "",
+      "sets": "",
+      "id": 6
+    }
+  ]
+}
