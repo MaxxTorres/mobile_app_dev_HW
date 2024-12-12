@@ -6,8 +6,8 @@ import logo from '../images/amazon_logo.png'
 import {Context as DiaryContext} from '../context/DiaryContext'
 
 const ProductsList = (props) => {
-  //const [products, setProducts] = useState(productsTest)
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState(productsTest)
+  //const [products, setProducts] = useState([])
   const {state} = useContext(DiaryContext)
   const {recentItem} = props
 

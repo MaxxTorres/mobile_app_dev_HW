@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     borderColor: 'darkgreen',
     borderRadius: 4,
     marginRight: 10,
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
   },
   checked: {
     backgroundColor: '#4CAF50',

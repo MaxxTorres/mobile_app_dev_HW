@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Button, StyleSheet, Text, TextInput, View, TouchableOpacity} from 'react-native'
 import Checkbox from '../components/Checkbox'
+import MaterialIcons from '@expo/vector-icons/MaterialIcons'
 
 const PostForm = ({onSubmit, inititalValues = {item: '', price: 0,
                         store: '', purpose: 'personal', purchased: false
@@ -77,11 +78,21 @@ const PostForm = ({onSubmit, inititalValues = {item: '', price: 0,
           onSubmit(item, price, store, purpose, purchased)
         }}
       />
+    <View style={styles.iconContainer}>
+      <MaterialIcons name="shopping-cart-checkout" size={100} color="darkgreen" />
+    </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
+  iconContainer: {
+    borderWidth: 1,
+    borderColor: 'transparent',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 50
+  },
   formCard: {
     margin: 15,
     padding: 10,

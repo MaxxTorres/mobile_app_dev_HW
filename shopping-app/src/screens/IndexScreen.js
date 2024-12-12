@@ -111,16 +111,21 @@ const IndexScreen = ({navigation}) => {
             onPress={() => {navigation.navigate('View', {id: item.id})
                         setRecentItem(item.item)}}>
             <View style={styles.itemContainer}>
-              <Text style={styles.title}>{item.item} | ${item.price}</Text>
-              <View style={{flexDirection: 'row', gap: 5}}>
-                <Text style={styles.title}>
+
+              <View>
+                <Text style={styles.title}>{item.item} | ${item.price}</Text>
+                <View style={{flexDirection: 'row', gap: 5}}>
+                <Text>
                   {item.purchased ? "Purchased" : "Unpurchased"}
                 </Text>
-                {item.purpose == "gift" ? <MaterialIcons name="card-giftcard" size={24} color="darkgreen" style={styles.giftIcon}/> : null}
+                {item.purpose == "gift" ? <MaterialIcons name="card-giftcard" size={20} color="red" style={styles.giftIcon}/> : null}
               </View>
-              <TouchableOpacity onPress={() => deleteDiaryPost(item.id)}>
+              </View>
+
+              <TouchableOpacity style={styles.deleteContainer} onPress={() => deleteDiaryPost(item.id)}>
                 <MaterialIcons name="remove-shopping-cart" size={24} color="#333" />
               </TouchableOpacity>
+
             </View>
           </TouchableOpacity>
         )}
@@ -148,6 +153,9 @@ IndexScreen.navigationOptions = ({navigation}) => {
 }
 
 const styles = StyleSheet.create({
+  deleteContainer: {
+
+  },
   giftIcon: {
     margin: 0 
   },
@@ -155,6 +163,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'darkgreen',
     borderRadius: 5,
     borderWidth: 1,
+    borderColor: 'white',
     marginRight: 10
   },
   barLabel: {
@@ -206,6 +215,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
+    fontWeight: 'bold'
   },
   addIcon: {
     marginRight: 10,
